@@ -1,0 +1,15 @@
+$ sudo apt-get update
+$ sudo apt-get install wget
+$ wget https://apt.puppetlabs.com/puppet-release-bionic.deb
+$ sudo dpkg -i puppet-release-bionic.deb
+$ sudo apt-get update
+$ apt policy puppet master
+$ sudo apt-get install puppet
+
+--------------------
+update puppet master id address
+
+/etc/hosts
+
+$ sudo systemctl start puppet
+$ sudo systemctl enable puppet

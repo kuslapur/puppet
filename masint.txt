@@ -1,0 +1,33 @@
+$ sudo apt-get update
+$ sudo apt-get install wget
+$ wget https://apt.puppetlabs.com/puppet-release-bionic.deb
+$ sudo dpkg -i puppet-release-bionic.deb
+$ sudo apt-get update
+$ apt policy puppet master
+$ sudo apt-get install puppet-master
+$ apt policy puppet master
+
+---------------------------------------
+$ sudo nano /etc/default/puppet-master
+
+ JAVA_ARGS="-Xms512m Xmx512m" //Add this Line
+
+$ sudo systemctl restart puppet-master
+
+
+---------------------------------
+$ sudo ufw allow 8140/tcp
+
+-------------------------------------------
+sudo nano /etc/hosts
+
+Enter ip address of puppet master
+
+---------------------------------------
+create directory path
+
+sudo mkdir -p /etc/puppet/code/environments/production/manifests
+
+sudo puppet cert list
+
+sudo puppet cert sign --all
